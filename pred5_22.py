@@ -33,7 +33,7 @@ X = [1, 7, 10, -1]
 xmin = X[0]
 for x in X:
     #Update minimum
-    if x > xmin:
+    if x < xmin:
         xmin = x
 
 print(xmin)
