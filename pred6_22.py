@@ -1,3 +1,20 @@
+#Immutable object
+x=10
+id(x)
+type(x)
+
+#New variable
+x = 5
+id(x)
+x=x+5
+id(x)
+
+#Mutable object
+L=[1, 2, 3, 4]
+id(L)
+L[0]=10
+id(L)
+
 #Return 1 parameter
 def add(a, b):
     return a + b
@@ -31,7 +48,7 @@ print(id(c))
 f(c)
 print(c)
 
-#Mmutable object
+#Mutable object
 def f2(L):
     L[0] = 7
     print(id(L))
