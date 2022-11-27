@@ -1,24 +1,26 @@
 import math
 
+#Error code
 def getRadius(perimeter):
     if perimeter >= 0:
         return perimeter /(2*pi)
     else:
         return -1
 
-
 r = getRadius(-1)
 if (r>=0):
     print('do something')
 
+#Throw an exception
 def getRadius2(perimeter):
     if perimeter >= 0:
         return perimeter /(2*pi)
     else:
         raise ValueError('Perimeter must be positive', perimeter)
 
-#r = getRadius2(-1)
+r = getRadius2(-1)
 
+#Fraction, solve the cause by error codes
 def f1(a, b):
     if b == 0:
         return -1
@@ -35,6 +37,7 @@ print(f1(a, b))
 #a = 1; b = [2];
 print(f1(a, b))
 
+#Fraction, solve consequencies using - try except
 def f2(a, b):
     try:
         return (a / b) ** 0.5
@@ -53,6 +56,7 @@ print(f2(a, b))
 #a = 1; b = [2];
 print(f2(a, b))
 
+#Fraction, solve cause by exceptions
 def f3(a, b):
     if type(a) != int or type(b) != int:
         raise TypeError('Incorrect type:', type(a), type(b))
@@ -75,7 +79,7 @@ except ZeroDivisionError as e:
 except ValueError as e:
     print(e)
 
-
+#Fraction, solve consequencies by exceptions
 def f4(a, b):
     try:
         return (a / b) ** 0.5
