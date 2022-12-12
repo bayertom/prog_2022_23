@@ -11,6 +11,13 @@ class Point:
     def Print(self):
         print("ID:" + str(self.id) + ", x=" +str(self.x) + ", y=" + str(self.y) + "\n" )
 
+p1 = Point()
+p2 = Point(30,-70)
+p3 = Point(10,10)
+
+p1.Print()
+p2.Print()
+p3.Print()
 
 class Algorithms:
 
@@ -29,13 +36,6 @@ class Algorithms:
         d = (dx*dx + dy * dy) **0.5
 
         return d
-
-p1 = Point()
-p2 = Point(30,-70)
-p3 = Point(10,10)
-p1.Print()
-p2.Print()
-p3.Print()
 
 a = Algorithms()
 dist = a.euclDistance(p1, p2)
